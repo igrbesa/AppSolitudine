@@ -63,6 +63,16 @@ namespace TextRuler.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Converter {
+            get {
+                object obj = ResourceManager.GetObject("Converter", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap l_indent_pos_lower {
             get {
                 object obj = ResourceManager.GetObject("l_indent_pos_lower", resourceCulture);

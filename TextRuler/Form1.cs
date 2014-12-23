@@ -13,37 +13,41 @@ namespace TextRuler
         {
             InitializeComponent();
 
+            Inits();
             //wrapPanelShowHide1.AddToLeftPanel(new WindowsExplorer.ExplorerTree());
             //wrapPanelShowHide1.leftPanel.Controls.Add(new WindowsExplorer.ExplorerTree());
+            //TODO: postaviti opcionalno u menu-ju
             wrapPanelShowHide.BackgrounColor = Color.Pink;
             //wrapPanelShowHide1.listBoxFiles.SelectedIndexChanged += listBoxFiles_SelectedIndexChanged;
+
+            
+            
+        }
+
+        private void Inits()
+        {
             wrapPanelShowHide.ItemSelectionChanged += wrapPanelShowHide1_ItemSelectionChanged;
+            wrapPanelShowHide.AddToRightPanel(new AdvancedTextEditorControl.AdvancedTextEditor());
+
             
         }
 
         void wrapPanelShowHide1_ItemSelectionChanged(object sender, EventArgs e)
         {
-
+            String file = wrapPanelShowHide.SelectedPath + wrapPanelShowHide.SelectedFile;
         }
-
-
-
-        void listBoxFiles_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
 
         private void Form1_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void ribbonButtonConverter_Click(object sender, EventArgs e)
         {
-            string filePath = this.wrapPanelShowHide.SelectedPath;
-            string file = this.wrapPanelShowHide.SelectedFile;
-            IList<string> files = wrapPanelShowHide.ListFiles;
-        }       
+            ConverterToRtf converter = new ConverterToRtf();
+            converter.Populate(wrapPanelShowHide.SelectedPath);
+            converter.Show();
+        }
+    
     }
 }

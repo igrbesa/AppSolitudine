@@ -27,8 +27,7 @@ namespace WrapPanelHideControl
             {
                 this.listBoxFiles.SelectedIndexChanged -= value;
             }
-        }
-       
+        }     
 
         public IList<string> ListFiles
         {
