@@ -20,15 +20,13 @@ namespace TextRuler
             wrapPanelShowHide.BackgrounColor = Color.Pink;
             //wrapPanelShowHide1.listBoxFiles.SelectedIndexChanged += listBoxFiles_SelectedIndexChanged;
 
-            
-            
         }
 
         private void Inits()
         {
             wrapPanelShowHide.ItemSelectionChanged += wrapPanelShowHide1_ItemSelectionChanged;
             wrapPanelShowHide.AddToRightPanel(new AdvancedTextEditorControl.AdvancedTextEditor());
-
+            wrapPanelShowHide.SelectedPath = @"D:\[Text Editor]\poezija - rtf\";
             
         }
 

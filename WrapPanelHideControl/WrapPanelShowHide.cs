@@ -44,7 +44,7 @@ namespace WrapPanelHideControl
         public String SelectedPath
         {
             get { return this.explorerTree.SelectedPath; }
-            //set { selectedPath = value; }
+            set { this.explorerTree.SelectedPath = value; }
         }
 
         public Color BackgrounColor
